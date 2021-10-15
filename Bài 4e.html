@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4e</title>
+</head>
+<body>
+<input type="text" id="year" >
+<button onclick="check()">Check</button>
+<p id="rs"></p>
+</body>
+<script>
+  function check() {
+    let year = +document.getElementById("year").value
+    let isLeapYear = false;
+
+    if (year % 4 == 0) {
+      if (year % 100 == 0) {
+        if (year % 400 == 0) {
+          isLeapYear = true;
+        }
+      } else {
+        isLeapYear = true;
+      }
+    }
+
+    if (isLeapYear) {
+      document.getElementById("rs").innerHTML =  year +"is a leap year" ;
+    } else {
+      document.getElementById("rs").innerHTML = year + "is not a leap year" ;
+    }
+  }
+</script>
+</html>

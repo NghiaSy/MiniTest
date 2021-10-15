@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4c</title>
+</head>
+<body>
+<input type="text" id="soDau">
+<input type="text" id="soCuoi">
+<button onclick="tinhTong()">Tính tổng</button>
+<p id="Tinh"></p>
+<script>
+    function tinhTong() {
+        let soDau = +document.getElementById("soDau").value
+        let soCuoi = +document.getElementById("soCuoi").value
+        let soHang = ( soCuoi - soDau ) + 1;
+        let tongDay = (soDau + soCuoi) * soHang / 2;
+        if (soCuoi >= soDau) {
+            document.getElementById("Tinh").innerHTML = "Tổng dãy số là : "  + tongDay;
+        }
+        else {
+            document.getElementById("Tinh").innerHTML = "Dãy số không hợp lệ"
+        }
+    }
+</script>
+</body>
+</html>
